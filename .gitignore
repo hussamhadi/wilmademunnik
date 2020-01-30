@@ -1,0 +1,10 @@
+static
+.idea/
+*.pyc
+*.swp
+media/
+*.tmp
+venv
+*.sqlite
+wilmademunnik/settings/__init__.py
+var/

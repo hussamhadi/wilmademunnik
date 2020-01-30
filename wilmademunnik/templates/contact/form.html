@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+Vul uw gegevens in het formulier hier onder in, en wij nemen zo spoedig mogelijk contact met u op.
+<form method="POST">{% csrf_token %}
+<table class="contactform">
+{{form.as_table}}
+<tr><td></td>
+<td><input class="btn" type="submit" value="{% trans 'Submit' %}" /></td>
+</tr>
+</table>
+</form>
+
+{% endblock %}

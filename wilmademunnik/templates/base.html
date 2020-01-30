@@ -1,0 +1,64 @@
+{% load sekizai_tags cms_tags menu_tags %}<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta name="description" content="Wilma de Munnik Tuinarchitectuur">
+	<meta name="keywords" content="Wilma, de Munnik, Tuinarchitectuur, Drunen, Tuinen">
+	<meta name="robots" content="index, follow">
+	<meta name="revisit-after" content="14 days">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+	<title>{% page_attribute title %} - Wilma de Munnik Tuinarchitectuur</title>
+
+	<link href="/static/css/style.css" rel="stylesheet" type="text/css">
+	
+	<!--link rel="stylesheet" href="css/lightbox.css" type="text/css" />
+	<script type="text/javascript" src="js/prototype.lite.js"></script>
+	<script type="text/javascript" src="js/moo.fx.js"></script>
+	<script type="text/javascript" src="js/litebox-1.0.js"></script-->
+<body class="body {% page_attribute slug %}">
+{% cms_toolbar %}
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19194036-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<div id="wrapper">
+	<div id="site">	
+		<div id="top">
+			<div id="top_content"><img src='/static/images/tuinarchitectuur.png' border='0'></div>
+		</div>
+		<div id="menu">	<div id="menu_content">{% show_menu %}</div></div>
+		<div id="photo">{% placeholder "header" %}</div>
+		<div id="content">
+			<div id="content_text">
+				<div id="content_wrapper_left">
+					<div id="home_saying"><div id="home_saying_text">
+						"Voor een tuin om van te genieten!"&nbsp;&nbsp;
+					</div></div>
+					{% placeholder "main" %}
+					{% block content %}{% endblock %}
+				</div>
+		</div>
+		<div id="content_wrapper_right">
+			{% placeholder "right" %}
+		</div>
+	
+		<div id="content_footer">
+			<center>Lissabonring 9  |  5152 NV Drunen  |  06 24992180 |  <a href="mailto:info@wilmademunnik.nl">info@wilmademunnik.nl</a></center>
+		</div>
+	</div>		
+		
+	<div id="logo"></div>
+</div>
+{% render_block 'js' %}
+{% render_block 'css' %}
+</body>
+</html>

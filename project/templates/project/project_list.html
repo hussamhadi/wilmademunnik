@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% load thumbnail %}
+{% block content %}
+<h1>Projecten</h1>
+<p>Hier ziet u een aantal van mijn projecten. Klik op de foto's voor meer informatie.</p>
+	<div class="project-list">
+	{% for object in object_list %}
+	<a href="{{object.get_absolute_url}}" class="project"><img src="{% thumbnail object.get_first_image.image 174x130 %}" /><br />
+	{{object}}</a>
+	{% endfor %}
+	</div>
+{% endblock %}

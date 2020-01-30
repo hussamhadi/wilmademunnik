@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% block content %}
+<div class="toprojectlist"><a href="{% url 'projectlist' %}">&lt;&lt; Terug naar projecten</a></div>
+<h1>{{object}}</h1>
+<b>Afwerkdatum:</b> {{object.date_finished }}<br />
+<b>Omschrijving:</b> <br />
+{% autoescape off %}{{object.description|linebreaks}}{% endautoescape %}
+<b>Afbeeldingen:</b><br />
+{% for image in object.get_images %}
+<a href="{{image.image.url}}" data-lightbox="lightbox" data-title="{{image.description}}"><img src="{% thumbnail image.image 200x300 %}" width="150" /></a>
+{% endfor %}
+
+
+<script src="/static/js/jquery-1.11.0.min.js"></script>
+<script src="/static/js/lightbox.min.js"></script>
+<link href="/static/css/lightbox.css" rel="stylesheet" />
+{% endblock %}
