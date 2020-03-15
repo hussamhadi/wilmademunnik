@@ -13,7 +13,8 @@ from settings_prod import *
 ```
 
 These commands should get you up and running with a development server:
-```$ virtualenv venv \&\& source venv/bin/activate
+```
+$ virtualenv venv \&\& source venv/bin/activate
 $ pip install -r requirements.txt
 $ ./manage.py migrate
 $ ./manage.py collectstatic
