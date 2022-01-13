@@ -1,6 +1,6 @@
 cmsplugin-contact==1.1.2
 Django==1.11.20
-django-cms==3.6.0
+django-cms==3.6.1
 django-debug-toolbar==1.11
 django-memcached==0.1.2
 django-rosetta==0.9.3
